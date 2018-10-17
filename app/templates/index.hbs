@@ -1,0 +1,58 @@
+<style>
+#message {
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1px;
+  height: 40px;
+  color: black;
+
+}
+
+#message:hover{
+  box-shadow: 1px 1px 1px 1px #888888;
+}
+
+a:link{
+  text-decoration: none;
+
+}
+
+#body{
+  margin-left: 15%;
+}
+
+</style>
+
+<div id="body">
+
+  {{#each model as |post|}}
+
+  {{#link-to "post" post.id}}
+
+  <div id="message">
+    <!-- <button type="button" onclick={{action "deletePost" post}}>
+    <img width= "20px" height= "20px"
+    src="https://findicons.com/files/icons/1580/devine_icons_part_2/128/trash_recyclebin_empty_closed.png"
+    alt="Delete">
+  </button> -->
+  <strong>{{post.from}}</strong> |
+  {{post.message}}
+
+  </div>
+{{/link-to}}
+
+
+
+<!-- {{#link-to "edit" post.id}}
+Edit
+{{/link-to}} -->
+
+{{/each}}
+
+
+</div>
+
+
+{{outlet}}

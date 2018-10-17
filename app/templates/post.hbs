@@ -1,0 +1,30 @@
+<style>
+#body{
+  margin-left: 15%;
+
+}
+
+</style>
+
+
+
+
+<div id="body">
+
+  <button type="button" onclick={{action "deleteEmail" model}}>
+     <img width= "20px" height= "20px"
+     src="https://findicons.com/files/icons/1580/devine_icons_part_2/128/trash_recyclebin_empty_closed.png"
+     alt="Delete">
+   </button>
+
+
+  {{#link-to "index"}}
+<img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/7/7940.svg">  Back
+  {{/link-to}}
+<h1>Subject: {{model.subject}}</h1><hr>
+<p>From: {{model.from}}</p>
+<p>To: {{model.to}}</p>
+
+<p>Message: {{model.message}}</p>
+
+</div>

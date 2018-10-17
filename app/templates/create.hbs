@@ -1,0 +1,36 @@
+<style>
+form{
+  margin-left: 15%;
+}
+
+</style>
+
+
+<form onsubmit={{action "createPost"}}>
+  <div>
+
+    <h1>New Email</h1>
+    <hr>
+    <label for="subject">Subject</label><br>
+    {{input type="text" id="subject" value=subject}}
+  </div>
+
+  <div>
+    <label for="to">To</label><br>
+    {{input type="text" id="to" value=to}}
+  </div>
+
+
+  <div>
+    <label for="from">From</label><br>
+    {{input type="text" id="from" value=from}}
+  </div>
+
+
+  <div>
+    <label for="message">Message</label>
+    {{textarea rows="8" cols="80" value=message}}
+  </div>
+
+  <button type="submit">Send</button>
+</form>
