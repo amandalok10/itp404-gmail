@@ -1,12 +1,12 @@
 <style>
 #compose{
   border-radius: 25px;
-   background: #DCDCDC;
+  background: #DCDCDC;
 
-   width: 150px;
-   height: 40px;
-   text-align: center;
-   padding: auto;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  padding: auto;
 }
 </style>
 
@@ -16,24 +16,24 @@
 <img width="5%" height="5%" src="https://image.flaticon.com/icons/svg/281/281769.svg">
 <nav>
   <div id="compose">
-  {{#link-to "create"}}
+    {{#link-to "create"}}
     <h3>Compose </h3><br>
-  {{/link-to}}
+    {{/link-to}}
 
-</div>
+  </div>
 
   {{#link-to "index"}}
-    <br>Inbox<br>
+  <br>Inbox<br>
   {{/link-to}}
 
 
 
   {{#link-to "sent"}}
-    Sent <br>
+  Sent <br>
   {{/link-to}}
 
   {{#link-to "trash"}}
-    Trash <br>
+  Trash <br>
   {{/link-to}}
 </nav>
 

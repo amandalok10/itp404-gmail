@@ -25,12 +25,20 @@ a:link{
 
 </style>
 
+
 <div id="body">
 
   <h2>Starred Emails</h2>
   {{#each model as |post|}}
 
+
   {{#if post.starred}}
+<h1 data-test="email"></h1>
+<h1 data-test="starred"></h1>
+<h1 data-test="from"></h1>
+<h1 data-test="to"></h1>
+<h1 data-test="subject"></h1>
+<h1 data-test="message"></h1>
 
       <StarButton @starred={{post.starred}} @onClick={{action "star" post}} />
 
@@ -41,6 +49,7 @@ a:link{
 
   <strong>{{post.from}}</strong> |
   {{truncate-text post.message limit=100}}
+
 
   </div>
   {{/link-to}}
@@ -55,8 +64,16 @@ a:link{
 
 
   {{#each model as |post|}}
+
   {{#if post.starred}}
     {{else}}
+<h1 data-test="email"></h1>
+<h1 data-test="notStarred"></h1>
+<h1 data-test="from"></h1>
+<h1 data-test="to"></h1>
+<h1 data-test="subject"></h1>
+<h1 data-test="message"></h1>
+
 
       <StarButton @starred={{post.starred}} @onClick={{action "star" post}} />
 
@@ -67,6 +84,8 @@ a:link{
 
   <strong>{{post.from}}</strong> |
   {{truncate-text post.message limit=100}}
+
+
 
   </div>
 {{/link-to}}
