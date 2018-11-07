@@ -1,9 +1,8 @@
-<div class="starActivate">
+
   <button type="button" onclick={{action "toggle"}}>
   {{#if @starred}}
-  <img width= "20px" height= "20px" src="https://image.flaticon.com/icons/svg/56/56786.svg"  alt="Starred">
+  <img data-test="testStarred" width= "20px" height= "20px" src="https://image.flaticon.com/icons/svg/56/56786.svg"  alt="Starred">
 {{else}}
-  <img width= "20px" height= "20px" src="https://image.flaticon.com/icons/svg/13/13595.svg"  alt="Not Starred">
+  <img data-test="testNotStarred" width= "20px" height= "20px" src="https://image.flaticon.com/icons/svg/13/13595.svg"  alt="Not Starred">
   {{/if}}
 </button>
-</div>

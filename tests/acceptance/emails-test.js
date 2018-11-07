@@ -101,7 +101,7 @@ assert.dom('[data-test="email"]').exists({ count: 1 });
     await click('[data-test="send"]');
 
 assert.equal(currentURL(), '/');
-assert.dom('[data-test="email"]').exists({ count: 1 });
+assert.dom('[data-test="notStarred"]').exists({ count: 1 });
   });
 
 
