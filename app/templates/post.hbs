@@ -11,20 +11,22 @@
 
 <div id="body">
 
-  <button type="button" onclick={{action "deleteEmail" model}}>
+  <button type="button" onclick={{action "deleteEvent" model}}>
      <img width= "20px" height= "20px"
      src="https://findicons.com/files/icons/1580/devine_icons_part_2/128/trash_recyclebin_empty_closed.png"
      alt="Delete">
    </button>
 
 
+
+
   {{#link-to "index"}}
 <img width="20px" height="20px" src="https://image.flaticon.com/icons/svg/7/7940.svg">  Back
   {{/link-to}}
-<h1>Subject: {{model.subject}}</h1><hr>
-<p>From: {{model.from}}</p>
-<p>To: {{model.to}}</p>
+<h1>Name: {{model.name}}</h1><hr>
+<p>Date: {{model.date}}</p>
+<p>Location: {{model.location}}</p>
 
-<p>Message: {{model.message}}</p>
+<p>Contact: {{model.contact}}</p>
 
 </div>

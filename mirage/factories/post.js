@@ -3,17 +3,17 @@ import { Factory, faker } from 'ember-cli-mirage';
 export default Factory.extend({
   id(i) {
     return i + 1;
-  },
-  from() {
-    return faker.internet.email();
-  },
-  to() {
-    return faker.internet.email();
-  },
-  subject() {
-    return faker.company.catchPhrase();
-  },
-  message() {
-    return faker.lorem.paragraphs();
-  }
+   }
+  // name() {
+  //   return faker.internet.email();
+  // },
+  // date() {
+  //   return faker.internet.email();
+  // },
+  // location() {
+  //   return faker.company.catchPhrase();
+  // },
+  // contact() {
+  //   return faker.lorem.paragraphs();
+  // }
 });

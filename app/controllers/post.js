@@ -2,9 +2,9 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
   actions: {
-    deleteEmail(post) {
+    deleteEvent(post) {
       let confirmed = window.confirm(
-        'Are you sure you want to delete this email?'
+        'Are you sure you want to delete this event?'
       );
 
       if (confirmed) {

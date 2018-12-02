@@ -23,7 +23,51 @@ a:link{
   margin-left: 15%;
 }
 
+.leaflet-container{
+  width: 100px;
+  height: 100px;
+}
+
+
+
 </style>
+
+
+{{liquid-fire}}
+
+
+<h2>It's a Match!</h2>
+{{#each model as |post|}}
+
+
+{{#if post.starred}}
+<!-- <h1 data-test="email"></h1>
+<h1 data-test="starred"></h1>
+<h1 data-test="from"></h1>
+<h1 data-test="to"></h1>
+<h1 data-test="subject"></h1>
+<h1 data-test="message"></h1>
+
+    <StarButton @starred={{post.starred}} @onClick={{action "star" post}} /> -->
+
+{{#link-to "post" post.id}}
+
+
+<div id="message">
+
+<strong>{{post.from}}</strong> |
+{{truncate-text post.message limit=100}}
+
+
+</div>
+{{/link-to}}
+
+
+{{/if}}
+
+{{/each}}
+
+
 
 <div id="body">
 
@@ -37,8 +81,14 @@ a:link{
     src="https://findicons.com/files/icons/1580/devine_icons_part_2/128/trash_recyclebin_empty_closed.png"
     alt="Delete">
   </button> -->
-  <strong>{{post.from}}</strong> |
-  {{post.message}}
+  <strong>{{post.name}}</strong> | {{post.date}}
+  {{post.location}}
+
+  {{#link-to "edit" post.id}}
+     <button type="button">
+       Edit
+     </button>
+     {{/link-to}}
 
   </div>
 {{/link-to}}
@@ -53,6 +103,8 @@ Edit
 
 
 </div>
+
+
 
 
 {{outlet}}

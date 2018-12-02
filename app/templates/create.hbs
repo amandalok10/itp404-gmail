@@ -7,30 +7,36 @@ form{
 
 
 <form onsubmit={{action "createPost"}}>
-  <div>
+  <div class="form {{if errors.name 'has-error'}}">
 
-    <h1>New Email</h1>
+    <h1>New Event</h1>
     <hr>
-    <label for="subject">Subject</label><br>
-    {{input type="text" id="subject" value=subject}}
+    <label for="name">Name</label><br>
+    {{input type="text" id="name" value=name}}
+
+
   </div>
 
   <div>
-    <label for="to">To</label><br>
-    {{input type="text" id="to" value=to}}
-  </div>
-
-
-  <div>
-    <label for="from">From</label><br>
-    {{input type="text" id="from" value=from}}
+    <label for="date">Date</label><br>
+    {{input type="text" id="date" value=date}}
   </div>
 
 
   <div>
-    <label for="message">Message</label>
-    {{textarea rows="8" cols="80" value=message}}
+    <label for="location">Location</label><br>
+    {{input type="text" id="location" value=location}}
   </div>
 
-  <button type="submit">Send</button>
+
+  <div>
+    <label for="message">Contact</label><br>
+    {{input type="text" id="contact" value=contact}}
+  </div>
+
+
+
+<SavingButton @onClick={{action "saveEvent"}}/>
+
+
 </form>

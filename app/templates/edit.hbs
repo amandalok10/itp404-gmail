@@ -1,25 +1,25 @@
 <form onsubmit={{action "editPost" model}}>
   <div>
-    <label for="subject">Subject</label>
-    {{input type="text" id="subject" value=model.title}}
+    <label for="name">Name</label>
+    {{input type="text" id="name" value=model.name}}
   </div>
 
   <div>
-    <label for="to">To</label>
-    {{input type="text" id="to" value=model.to}}
-  </div>
-
-
-  <div>
-    <label for="from">From</label>
-    {{input type="text" id="from" value=model.from}}
+    <label for="date">Date</label>
+    {{input type="text" id="date" value=model.date}}
   </div>
 
 
   <div>
-    <label for="message">Message</label>
-    {{textarea rows="8" cols="80" value=model.Message}}
+    <label for="location">Location</label>
+    {{input type="text" id="location" value=model.location}}
   </div>
 
-  <button type="submit">Send</button>
+
+  <div>
+    <label for="contact">Contact</label>
+    {{input type="text" id="contact" value=model.contact}}
+  </div>
+
+  <button type="submit">Update</button>
 </form>
