@@ -1,6 +1,7 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
+
   actions: {
     deleteEvent(post) {
       let confirmed = window.confirm(

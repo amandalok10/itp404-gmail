@@ -1,7 +1,11 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-  actions: {
+    starred: true,
+      actions: {
+          star(post, newValue) {
+            post.set('starred', newValue);
+          },
     deletePost(post) {
       let confirmed = window.confirm(
         'Are you sure you want to delete this event?'

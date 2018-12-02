@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -16,10 +17,39 @@ About<br>
 
   {{#link-to "index"}}
 All Events<br>
+=======
+<style>
+#compose{
+  border-radius: 25px;
+  background: #DCDCDC;
+
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  padding: auto;
+}
+</style>
+
+
+
+
+<img width="5%" height="5%" src="https://image.flaticon.com/icons/svg/281/281769.svg">
+<nav>
+  <div id="compose">
+    {{#link-to "create"}}
+    <h3>Compose </h3><br>
+    {{/link-to}}
+
+  </div>
+
+  {{#link-to "index"}}
+  <br>Inbox<br>
+>>>>>>> 3f878518d8adca51d33eadd534f46429c2320f51
   {{/link-to}}
 
 
 
+<<<<<<< HEAD
     {{#link-to "map"}}
   Map View<br>
     {{/link-to}}
@@ -35,6 +65,15 @@ All Events<br>
   {{#link-to "trash"}}
     Trash <br>
   {{/link-to}} -->
+=======
+  {{#link-to "sent"}}
+  Sent <br>
+  {{/link-to}}
+
+  {{#link-to "trash"}}
+  Trash <br>
+  {{/link-to}}
+>>>>>>> 3f878518d8adca51d33eadd534f46429c2320f51
 </nav>
 
 {{outlet}}
